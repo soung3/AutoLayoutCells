@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Autolayout_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="99"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVW-5k-47i">
+                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                        <accessibility key="accessibilityConfiguration" label="Photo Image"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="3jE-QU-QQe"/>
+                            <constraint firstAttribute="width" constant="64" id="sXI-cJ-3BU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF5-NN-Iac">
+                        <rect key="frame" x="80" y="38" width="232" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="MvE-YQ-ohP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" misplaced="YES" text="QuoteLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvF-b2-x7g">
+                        <rect key="frame" x="80" y="13" width="232" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="232" id="UmD-cs-R0f"/>
+                            <constraint firstAttribute="height" constant="22" id="fVN-qd-bGn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vvF-b2-x7g" firstAttribute="leading" secondItem="bVW-5k-47i" secondAttribute="trailing" constant="8" id="PoV-ck-tF0"/>
+                    <constraint firstItem="FF5-NN-Iac" firstAttribute="top" secondItem="vvF-b2-x7g" secondAttribute="bottom" constant="2" id="Tyb-Tw-4nv"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="bVW-5k-47i" secondAttribute="bottom" constant="8" id="cbb-xM-k5B"/>
+                    <constraint firstItem="bVW-5k-47i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hbE-AZ-QRq"/>
+                    <constraint firstItem="vvF-b2-x7g" firstAttribute="trailing" secondItem="FF5-NN-Iac" secondAttribute="trailing" id="maC-Dx-eKX"/>
+                    <constraint firstItem="FF5-NN-Iac" firstAttribute="leading" secondItem="vvF-b2-x7g" secondAttribute="leading" id="pr0-Ng-6Y5"/>
+                    <constraint firstItem="vvF-b2-x7g" firstAttribute="leading" secondItem="bVW-5k-47i" secondAttribute="trailing" constant="8" id="tf9-D8-nYh"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="tf9-D8-nYh"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vvF-b2-x7g" secondAttribute="trailing" constant="8" id="8Xw-9a-Xbi"/>
+                <constraint firstItem="vvF-b2-x7g" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="8" id="Af3-J0-0yQ"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FF5-NN-Iac" secondAttribute="bottom" constant="8" id="T2S-EN-EKH"/>
+            </constraints>
+            <connections>
+                <outlet property="nameLabel" destination="FF5-NN-Iac" id="jd1-AN-iom"/>
+                <outlet property="photoRightMarginConstraint" destination="PoV-ck-tF0" id="ZGr-yJ-buO"/>
+                <outlet property="photoView" destination="bVW-5k-47i" id="LbH-0v-0ud"/>
+                <outlet property="photoWidthConstraint" destination="sXI-cJ-3BU" id="9mz-OD-tHQ"/>
+                <outlet property="quoteLabelText" destination="vvF-b2-x7g" id="6A5-nA-IwB"/>
+            </connections>
+            <point key="canvasLocation" x="448" y="410.5"/>
+        </tableViewCell>
+    </objects>
+</document>
